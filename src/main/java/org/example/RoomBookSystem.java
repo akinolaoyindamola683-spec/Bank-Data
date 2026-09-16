@@ -38,7 +38,7 @@ public class RoomBookSystem {
         }
     }
 
-    public void bookARoom(int roomNo){
+    public void bookARoom(int roomNo, int night){
         checkIsAvaliable();
         if(isAvaliable != true) {
             System.out.println("This room as already been booked");
@@ -48,6 +48,11 @@ public class RoomBookSystem {
         else {
             if (roomNo == 101 || roomNo == 102 || roomNo == 201 || roomNo == 202 ) {
                 System.out.println("This room was booked successfully");
+                System.out.println("Room Type: " + roomType);
+                System.out.println("Price: " + getPrice());
+                System.out.println("Number of nights: " + night);
+                double total =  night * getPrice();
+                System.out.println("Total amount to pay: " + total );
                 isAvaliable = false;
             }
         }

@@ -43,22 +43,24 @@ public class RoomBookSystemTest {
                 case 2:
                     System.out.println("Enter room number: ");
                      roomNo = scanner.nextInt();
+                    System.out.println("How many nights do you want to spend: ");
+                    int night = scanner.nextInt();
 
                     switch (roomNo){
                         case 101:
-                            bookRoom1.bookARoom(roomNo);
+                            bookRoom1.bookARoom(roomNo, night);
                         break;
 
                         case 102:
-                            bookRoom2.bookARoom(roomNo);
+                            bookRoom2.bookARoom(roomNo, night);
                         break;
 
                         case 201:
-                            bookRoom3.bookARoom(roomNo);
+                            bookRoom3.bookARoom(roomNo, night);
                         break;
 
                         case 202:
-                            bookRoom4.bookARoom(roomNo);
+                            bookRoom4.bookARoom(roomNo, night);
                         break;
 
                         default:
